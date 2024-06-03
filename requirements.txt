@@ -1,3 +1,4 @@
+Coverage
 altgraph==0.17.4
 appdirs==1.4.4
 asttokens==2.4.1
