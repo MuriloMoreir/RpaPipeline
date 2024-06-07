@@ -40,7 +40,7 @@ jobs:
       name: Publicando no Docker Hub
       with:
         image: murilomoreira971/rpa_python
-        tags: v1, latest
+        tags: ${{github.run_number}}
         registry: docker.io
         dockerfile: Dockerfile
         username: ${{secrets.DOCKER_USERNAME}}
