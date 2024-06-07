@@ -21,12 +21,13 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 driver = webdriver.Chrome(options = chrome_options)
 
-driver.get("https://www.google.com.br/search?q=d%C3%B3lar")
+# Acessando a página com as cotações
+driver.get("https://www.google.com/search?q=pre%C3%A7o+dolar")
 sleep(2)
 
 # Pegando o valor do dólar
 # Acessando o elemento (dólar) da página     
-dolar = driver.find_element(By.XPATH, '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]')
+dolar = driver.find_element('xpath', '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]')
 dolar_site = dolar.text
 dolar_site = float(dolar_site.replace(",","."))
 print('Dólar: ', dolar_site)
