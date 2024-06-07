@@ -32,11 +32,11 @@ print('Dólar: ', dolar_site)
 
 
 # Conectando com o DB
-conexao = psycopg2.connect(database = "dbcotacaodolar",
-                           host = "localhost",
-                           user = "postgres",
-                           password = "1234",
-                           port = "5432")
+conexao = psycopg2.connect(database = "dbCotacao",
+                           host = "pg-3f7b996d-muriloolimora971.f.aivencloud.com",
+                           user = "avnadmin",
+                           password = "AVNS_BjsAizQig1olY9q0atk",
+                           port = "23734")
 
 print(conexao.info)
 print(conexao.status)
