@@ -25,7 +25,8 @@ driver.get("https://www.google.com.br/search?q=d%C3%B3lar")
 sleep(2)
 
 # Pegando o valor do dólar
-dolar = driver.find_element(By.CSS_SELECTOR, ('.DFlfde'))
+# Acessando o elemento (dólar) da página     
+dolar = driver.find_element('xpath', '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]')
 dolar_site = dolar.text
 dolar_site = float(dolar_site.replace(",","."))
 print('Dólar: ', dolar_site)
