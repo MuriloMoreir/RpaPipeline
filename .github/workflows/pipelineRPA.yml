@@ -37,14 +37,14 @@ jobs:
       run: coverage report
 
     - name: Git Version
-      id: ver
+      id: version
       uses: codacy/git-version@2.7.1
 
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Publicando no Docker Hub
       with:
         image: murilomoreira971/rpa_python
-        tags: ${{github.run_number}}, ${{steps.ver.outputs.version}}
+        tags: ${{github.run_number}}, ${{steps.version.outputs.version}}
         registry: docker.io
         dockerfile: Dockerfile
         username: ${{secrets.DOCKER_USERNAME}}
