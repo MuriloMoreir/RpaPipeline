@@ -38,8 +38,7 @@ jobs:
 
     - name: Git Version
       id: ver
-      uses: codacy/git-version@2.4.0
-          
+      uses: codacy/git-version@2.7.1
 
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Publicando no Docker Hub
